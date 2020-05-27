@@ -116,8 +116,7 @@ func TestTimeValue_LessThan(t *testing.T) {
 	t1 := time.Now()
 
 	v := TimeValue(t1)
-	// FIXME: Non-deterministic, but unlikely that instructions between t1 and here take zero nanos.
-	require.Equal(t, true, v.LessThan(TimeValue(time.Now())))
+	require.Equal(t, true, v.LessThan(TimeValue(t1.Add(time.Second))))
 	require.Equal(t, false, v.LessThan(TimeValue(t0)))
 	require.Equal(t, false, v.LessThan(v))
 }
