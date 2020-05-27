@@ -1,0 +1,6 @@
+# Intellij project files
+.idea/
+*.iml
+
+# Vim swap files
+*.sw[op]
