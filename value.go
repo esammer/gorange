@@ -19,13 +19,13 @@ func (this IntValue) LessThan(v RangeValue) bool {
 	return this < v.(IntValue)
 }
 
-type Int8Value int32
+type Int8Value int8
 
 func (this Int8Value) LessThan(v RangeValue) bool {
 	return this < v.(Int8Value)
 }
 
-type Int16Value int32
+type Int16Value int16
 
 func (this Int16Value) LessThan(v RangeValue) bool {
 	return this < v.(Int16Value)
@@ -49,7 +49,7 @@ func (this UIntValue) LessThan(v RangeValue) bool {
 	return this < v.(UIntValue)
 }
 
-type UInt8Value uint16
+type UInt8Value uint8
 
 func (this UInt8Value) LessThan(v RangeValue) bool {
 	return this < v.(UInt8Value)
